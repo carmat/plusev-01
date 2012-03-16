@@ -1,4 +1,10 @@
-Plusev::Application.routes.draw do
+Plusev02::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact"
+
+  get "pages/colophon"
+
   resources :tournaments
   resources :users
 
