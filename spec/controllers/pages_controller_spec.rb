@@ -1,12 +1,18 @@
 require 'spec_helper'
 
 describe PagesController do
+  render_views
 
   describe "GET 'home'" do
     it "should be successful" do
       get 'home'
       response.should be_success
     end
+	
+	it "should have the right title" do
+	  get 'home'
+	  response.should have_selector("title", :content => '+EVlive Initial App | Home')
+	end
   end
 
   describe "GET 'contact'" do
@@ -14,6 +20,11 @@ describe PagesController do
       get 'contact'
       response.should be_success
     end
+	
+	it "should have the right title" do
+	  get 'contact'
+	  response.should have_selector("title", :content => '+EVlive Initial App | Contact')
+	end
   end
 
   describe "GET 'colophon'" do
@@ -21,6 +32,11 @@ describe PagesController do
       get 'colophon'
       response.should be_success
     end
+	
+	it "should have the right title" do
+	  get 'colophon'
+	  response.should have_selector("title", :content => '+EVlive Initial App | Colophon')
+	end
   end
 
   describe "GET 'about'" do
@@ -28,6 +44,10 @@ describe PagesController do
       get 'about'
       response.should be_success
     end
+	
+	it "should have the right title" do
+	  get 'about'
+	  response.should have_selector("title", :content => '+EVlive Initial App | About')
+	end
   end
-
 end
