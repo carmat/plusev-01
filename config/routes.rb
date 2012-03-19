@@ -1,13 +1,9 @@
 Plusev02::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/contact"
-
-  get "pages/colophon"
-  
-  get "pages/about"
-  
-  get "pages/support"
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
+  match '/support', :to => 'pages#support'
+  match '/colophon', :to => 'pages#colophon'
+  root :to => 'pages#home'
 
   resources :tournaments
   resources :users
@@ -59,6 +55,7 @@ Plusev02::Application.routes.draw do
   #     resources :products
   #   end
 
+  ### CURRENTLY IN USE ###
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
