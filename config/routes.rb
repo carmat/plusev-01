@@ -1,9 +1,14 @@
 Plusev02::Application.routes.draw do
-  root :to => 'pages#home'
-  match '/about', :to => 'pages#about'
-  match '/contact', :to => 'pages#contact'
-  match '/support', :to => 'pages#support'
-  match '/colophon', :to => 'pages#colophon'
+  get "users/new"
+
+  # Static Pages
+  root					:to => 'pages#home'
+  match '/about',		:to => 'pages#about'
+  match '/contact',		:to => 'pages#contact'
+  match '/support',		:to => 'pages#support'
+  match '/colophon',	:to => 'pages#colophon'
+  # Dynamic Pages
+  match '/signup',		:to => 'users#new'
 
   resources :tournaments
   resources :users
