@@ -21,7 +21,7 @@ nav ul li a:hover { text-decoration:underline; }
 footer nav { float:none; }
 
 /* Sign up button */
-a.signup_button { width:190px; margin:0 auto; padding: 20px; display: block; text-align: center; background: #006400; color: #fff; font-size: 150%; font-weight: bold; }
+a.btn_signup { width:190px; margin:0 auto; padding: 20px; display: block; text-align: center; background: #006400; color: #fff; font-size: 150%; font-weight: bold; }
 
 /* Round corners */
 .round {

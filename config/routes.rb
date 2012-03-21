@@ -1,9 +1,9 @@
 Plusev02::Application.routes.draw do
+  root :to => 'pages#home'
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/support', :to => 'pages#support'
   match '/colophon', :to => 'pages#colophon'
-  root :to => 'pages#home'
 
   resources :tournaments
   resources :users
