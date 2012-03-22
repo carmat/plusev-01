@@ -1,17 +1,19 @@
 Plusev02::Application.routes.draw do
+  resources :users
+  resources :tournaments
+
   get "users/new"
 
-  # Static Pages
+  # Route Static Pages
   root					:to => 'pages#home'
   match '/about',		:to => 'pages#about'
   match '/contact',		:to => 'pages#contact'
   match '/support',		:to => 'pages#support'
   match '/colophon',	:to => 'pages#colophon'
-  # Dynamic Pages
+
+  # Route Dynamic Pages
   match '/signup',		:to => 'users#new'
 
-  resources :tournaments
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

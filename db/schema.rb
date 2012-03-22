@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120314031117) do
+ActiveRecord::Schema.define(:version => 20120322052050) do
 
   create_table "tournaments", :force => true do |t|
     t.string   "title"
@@ -26,5 +26,7 @@ ActiveRecord::Schema.define(:version => 20120314031117) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end
